@@ -3,9 +3,9 @@ $(function() {
     infinite: true,
     fade: true,
     prevArrow:
-      '<img class="slider-arrows slider-arrows__left slider-arrows__left-1" src="./app/img/arrows-left.svg" alt=""></img>',
+      '<img class="slider-arrows slider-arrows__left slider-arrows__left-1" src="/app/img/arrows-left.svg" alt=""></img>',
     nextArrow:
-      '<img class="slider-arrows slider-arrows__right slider-arrows__right-2" src="./app/img/arrows-right.svg" alt=""></img>',
+      '<img class="slider-arrows slider-arrows__right slider-arrows__right-2" src="/app/img/arrows-right.svg" alt=""></img>',
     asNavFor: ".slider-dotshead",
     autoplay: true,
     autoplaySpeed: 2500
@@ -19,9 +19,9 @@ $(function() {
     slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow:
-      '<img class="slider-arrows slider-arrows__left" src="./app/img/arrows-left.svg" alt=""></img>',
+      '<img class="slider-arrows slider-arrows__left" src="/app/img/arrows-left.svg" alt=""></img>',
     nextArrow:
-      '<img class="slider-arrows slider-arrows__right" src="./app/img/arrows-right.svg" alt=""></img>',
+      '<img class="slider-arrows slider-arrows__right" src="/app/img/arrows-right.svg" alt=""></img>',
     autoplay: true,
     autoplaySpeed: 2500,
     responsive: [
