@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Создание сайтов Бишкек Наши Работы| WEB-SYD</title>
+	<meta name="description" content="Обратите внимания на ниши произведения, мы выполняем творческий и качественные проекты.Полную информацию о наших работах, можете посмотреть на нашей странице.Ваш сайт ждет вас!">
+	<meta name="keywords" content=" создать сайт в бишкеке купить сайт бишкек сделать сайт в бишкеке дизаин SEO контекстная реклама лендинг сайт визитка интернет магазин купить">
+	<meta property="og:title" content="Создание сайтов Бишкек Наши Работы| WEB-SYD"/>
+	<meta property="og:description" content="Сайт, Разработка, Дизайн, Логотип, SEO, Создание сайтов, Контекстная реклама, Google Adwords, Yandex Direct"/>
+    <meta property="og:url" content="https://web-syd.ru/">
+	<meta property="og:image" content="img/logo_media.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,400,500,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="icon" type="image/svg" href="favicon.svg" />
+  </head>
+  <body>
+    <section class="nav-bar__menu">
+      <div class="nav-bar__global">
+        <div class="nav-bar__item">
+          <img src="img/logo-nav.svg" alt="" />
+          <ul class="nav-bar__link">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="work.html">Работы</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+            <li><a href="price.html">Прайс</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <div class="nav-btn__inner">
+          <div class="nav-btn__line"></div>
+          <div class="nav-btn__line"></div>
+          <div class="nav-btn__line"></div>
+        </div>
+      </div>
+    </section>
+    <section class="logotype">
+      <div class="title">
+        <span class="global-title animated fadeInLeft delay-1s">
+          Работы
+          <h3>Работы</h3>
+        </span>
+      </div>
+      <div class="global__subtitle">
+        <div class="subtitle">
+          <div class="headline-left">То что вам надо</div>
+          <div class="subtitle__head">Наше <span>|</span> Портфолио</div>
+        </div>
+      </div>
+      <div class="portfolio__content">
+        <div class="portfolio__block">
+          <a href="#">
+            <img src="img/portfolio_1.svg" alt="" />
+          </a>
+        </div>
+        <div class="portfolio__block">
+          <a href="#">
+            <img src="img/portfolio_1.svg" alt="" />
+          </a>
+        </div>
+        <div class="portfolio__block">
+          <a href="#">
+            <img src="img/portfolio_1.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="portfolio__content">
+        <div class="portfolio__block">
+          <a href="#">
+            <img src="img/portfolio.svg" alt="" />
+          </a>
+        </div>
+        <div class="portfolio__block">
+          <a href="#">
+            <img src="img/portfolio.svg" alt="" />
+          </a>
+        </div>
+        <div class="portfolio__block">
+          <a href="#">
+            <img src="img/portfolio.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="button">
+        <a class="btn"> написать <span>нам</span> </a>
+      </div>
+    </section>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="close" class="close" style="cursor: pointer;">&times;</span>
+        <div class="modal-content__header">
+          <h2>Обратный звонок</h2>
+        </div>
+        <div class="modal-body">
+          <div class="relations-block">
+			<form>
+                <input type="text" name="name" placeholder="Имя">
+                <input type="tel" name="tel" placeholder="Номер телефона">
+                <input type="email" name="email" placeholder="E-mail">
+                <button id="but" class="btn-call"  type="submit" name="submit" >Отправить</button>
+             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__title">
+        © SYD 2020. All Rights Reserved.
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+	 <script>
+	    $(document).ready(function(){
+	        $("form").submit(function() { // Событие отправки с формы
+	                var form_data = $(this).serialize(); // Собираем данные из полей
+	                $.ajax({
+	                type: "POST", // Метод отправки
+	                url: "sendform.php", // Путь к PHP обработчику sendform.php
+	                data: form_data,
+	                success: function() {
+	                    //$('.popup').addClass('active');
+	                    //$('.thanks').addClass('active');
+						  alert('Отправлено');
+						  $('#but').hide();
+        				}
+	                });
+    			event.preventDefault();
+	        });
+	    });
+	  </script>
+  </body>
+</html>
